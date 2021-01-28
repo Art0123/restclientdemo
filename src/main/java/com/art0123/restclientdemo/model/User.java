@@ -1,5 +1,8 @@
 package com.art0123.restclientdemo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
 
    private int id;
@@ -91,6 +94,6 @@ public class User {
     }
 
     public String toString() {
-        return "username: " + this.username + "------ name: " + this.name;
+        return "username: " + this.username + " ------ name: " + this.name;
     }
 }
